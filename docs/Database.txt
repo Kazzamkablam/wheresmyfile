@@ -1,0 +1,17 @@
+CREATE TABLE Users(
+    UserID int AUTO_INCREMENT,
+    UserName varchar(255) UNIQUE NOT NULL,
+    PassWord varchar(255) NOT NULL,
+    PRIMARY KEY (UserID)
+);
+
+CREATE TABLE Files (
+    FileID int AUTO_INCREMENT,
+    FileName varchar(255) NOT NULL,
+    FileDesc varchar(255) NOT NULL,
+    FileType int,
+    UserID int,
+    PRIMARY KEY (FileID),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+    
+);

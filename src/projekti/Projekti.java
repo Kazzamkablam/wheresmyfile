@@ -19,8 +19,7 @@ import java.sql.*;
 import java.util.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
+
 import javax.swing.event.ListSelectionListener;
 
 import javax.swing.event.ListSelectionEvent;
@@ -120,7 +119,7 @@ class fileDataBase { //actual database
 class SQLQueries { //sql queries class
 	private static Connection conn;
 	private static final String URL ="jdbc:mysql://penttinen-juha.mysql.database.azure.com:3306/myfiles?useSSL=true&requireSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC"; //need timezone stuff to get connection to work properly 
-	private static String database = "myfiles";
+//	private static String database = "myfiles";
 
 	private static final String USERNAME ="JuhPen12@penttinen-juha";
 	private static final String PASSWORD="Murio4Supper";
@@ -510,7 +509,7 @@ class Projekti {
 		menuPanel.add(browsePanel);		
 
 		String[] options = new String[] {"Login", "Register", "Exit"};
-				int rows = 0; //default result rows
+				//int rows = 0; //default result rows
 				int result = JOptionPane.showOptionDialog(null, menuPanel, "Please log in or register",
 				
 	            JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
